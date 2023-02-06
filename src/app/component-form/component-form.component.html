@@ -1,0 +1,40 @@
+  <div class="form-holder">
+    <div class="form-content">
+      <div class="form-items" >
+        <label>Lastname : </label> <input type="text" placeholder="Lastname" [(ngModel)]="ngLastname" appCheckFormString /> <br>
+        <label>Firstname : </label> <input type="text" placeholder="Firstname" [(ngModel)]="ngFirstname"  appCheckFormString/> <br>
+        <label>Zip code : </label> <input type="text" placeholder="Zip code" [(ngModel)]="ngZipCode" appCheckFormNumber /> <br>
+        <label>Tel : </label> <input type="tel" placeholder="Telephone" [(ngModel)]="ngTel" appCheckFormNumber /> <br>
+        <label>Email : </label> <input type="email" placeholder="Email" [(ngModel)]="ngEmail"  appCheckFormEmail/> <br>
+        <label>Gender : </label>
+        <div>
+          <input type="radio" name="gender" value="Male" [(ngModel)]="ngGender" > <label> Male</label>
+          <input type="radio" name="gender" value="Female" [(ngModel)]="ngGender" > <label> Female</label>
+        </div>
+
+        <div>
+          <label>Login : </label> <input type="text" placeholder="Login" [(ngModel)]="ngLogin" /> <br>
+          <label>Password : </label> <input type="password" id="password" placeholder="Password"
+            [(ngModel)]="ngPassword" /> <br>
+          <label>Verification Password : </label> <input type="password" id="verifPassword"
+            placeholder="Verification Password" [(ngModel)]="ngPasswordCheck"  /> <br>
+        </div>
+
+        <button (click)="showSummary=true">Send</button>
+
+        <p>Test synchro : {{ngLastname}}</p>
+
+      </div>
+      <ng-container *ngIf="showSummary ; showSummary">
+        <app-component-summary showSummary [lastname]="ngLastname" [firstname]="ngFirstname"
+        [zipCode]="ngZipCode" [tel]="ngTel" [email]="ngEmail"
+        [gender]="ngGender"
+        [login]="ngLogin" [password]="ngPassword" [passwordCheck]="ngPasswordCheck"
+         (change)="clicChange($event)">
+
+        </app-component-summary>
+
+      </ng-container>
+    </div>
+
+  </div>

@@ -1,0 +1,20 @@
+<div class="form-body">
+  <div class="form-holder">
+    <div class="form-content">
+      <div class="form-items">
+        <h3> Summary : </h3>
+        <p>Lastname : {{lastname}}</p>
+        <p>Firstname : {{firstname}}</p>
+        <p>Zip Code : {{zipCode}}</p>
+        <p>Tel : {{tel | pipeFormatTel}}</p>
+        <p>Email : {{email}}</p>
+        <p>Gender : {{gender}}</p>
+        <p>Login : {{login}}</p>
+        <p>Password : {{password}}</p>
+        <p>Password verification : {{passwordCheck}}</p>
+        <button (click)="Close()">Close summary</button>
+
+      </div>
+    </div>
+  </div>
+</div>

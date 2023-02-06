@@ -1,0 +1,41 @@
+.form-holder {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 3em;
+}
+
+.form-holder .form-content {
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-content .form-items {
+    border: 0.1em solid rgb(255, 255, 255);
+    padding: 1em;
+    display: inline-block;
+    min-width: 3em;
+    border-radius: 1em;
+    text-align: left;
+    margin: 1em;
+}
+
+
+label, p, h3 {
+    color: #fff;
+}
+
+input {
+  margin-bottom: 1em;
+  padding: 0.8em 2em;
+
+}
+
+
+
+
